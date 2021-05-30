@@ -1,10 +1,15 @@
 import Header from "./components/Header"
 import Button from "./components/Button"
 import Sections from "./components/Sections"
+import Display from "./components/Display"
 import { useState } from "react"
 
 function App() {
   const [MainButtonState, setMainButtonState] = useState(
+    false
+  );
+
+  const [SkillState, setSkillState] = useState(
     false
   );
 
@@ -58,8 +63,8 @@ function App() {
     <div className="App">
       <Header />
       <Button className="mainButton" text={MainButtonState ? 'Show' : 'Close'} clr={MainButtonState ? "#009c29" : "#09002e"} onShow={() => setMainButtonState(!MainButtonState)}/>
-      <Sections className="contents" sectionContent={sectionContent} showButton={MainButtonState} isButton={true} />
-      <Sections className="skills" sectionContent={displaySkills} showButton={MainButtonState} isButton={false} />
+      <Sections className="contents" sectionContent={sectionContent} showButton={MainButtonState} stateSkill={() => setSkillState(!SkillState)} isButton={true} />
+      <Display displaySkills={displaySkills} MainButtonState={MainButtonState} SkillState={SkillState}/>
     </div>
   );
 }
