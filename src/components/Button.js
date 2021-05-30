@@ -1,7 +1,7 @@
-const Button = ( {className, text, clr, onShow} ) => {
+const Button = (props) => {
     return (
         <div>
-           <button className={className} onClick={onShow} style={{backgroundColor: clr}}> {text} </button>
+           <button className={props.className} onClick={props.stateChange}> {props.text} </button>
         </div>
     )
 }

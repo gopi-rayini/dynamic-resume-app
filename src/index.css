@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #ffd894;
+  background-color: #6193ff;
 }
 
 code {
@@ -15,75 +15,42 @@ code {
 }
 
 .Header{
-  background-color:bisque;
-  border: solid;
-  border-radius: 5px;
-  border-color: rgb(240,240,200);
-  margin-top: 2rem;
-
   font-family: "Times New Roman", serif;
   font-weight: bold;
   text-align: center;
   color: #09002e;
-}
 
-h1{
-  padding: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .mainButton{
-  display: block;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  color:bisque;
-  border: none;
-  padding: 15px;
-  width: 50%;
-  border-radius: 15px;
+  padding-top: 7px;
+
   font-size: 2rem;
-}
 
-.contents .sectButton{
-  background-color: bisque;
-  padding: 1rem;
-  font-size: 1rem;
+  border:none;
   border-radius: 5px;
-  border-color: blanchedalmond;
 }
 
-.contents{
-  margin-top:5%;
-  background-color: #09002e;
-  border-radius: 15px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.contents .section{
-  color:bisque;
-  margin-left: 5%;
-  margin-right: 5%;
+.sections{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  font-size: 2rem;
-
-  padding: 0 10px 0 10px;
 }
 
-.skills{
-  margin-top: 1rem;
-  margin-left: 5%;
-  margin-right: 5%;
+.Skills{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.skills .section{
-  color: red;
-  padding: 5px;
-  font-weight: bold;
-  
+.main-body{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: blanchedalmond;
+  padding: 5%;
+  border-radius: 15px;
 }

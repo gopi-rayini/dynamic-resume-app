@@ -1,10 +1,10 @@
 import Button from "./Button"
+import Display from "./Display"
 
-const Section = ( {text, sectID, isButton, onShow, btntext} ) => {
+const Section = ( props ) => {
     return (
-        <div className="section" style={(sectID < 3) ? {borderBottom: 'solid'} : {border: 'none'}}>
-            <p> {text} </p>
-            {isButton && <Button text={btntext} className="sectButton" onShow={onShow} />}
+        <div className="section">
+           
         </div>
     )
 }

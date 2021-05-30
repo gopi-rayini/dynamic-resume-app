@@ -1,10 +1,29 @@
-import Section from "./Section"
+import Button from "./Button"
+import Display from "./Display"
+import { FaAngleRight} from "react-icons/fa"
+import { FaAngleDown } from "react-icons/fa"
+import { useState } from 'react'
 
-const Sections = ( {className, sectionContent, showButton, isButton, onShow, stateSkill} ) => {
+const Sections = ( props ) => {
+
+    const [ButtonState, setButtonState] = useState(
+        true
+    );
+
     return (
-        <div className={className} style={(!showButton && isButton) ? {border: 'solid', borderColor:'black'} : {border: 'none'}}>
-            {!showButton && sectionContent.map((sect) => (
-                <Section text={sect.text} sectID={sect.id} isButton={isButton} btntext={stateSkill ? "Show" : "Hide"} onShow={sect.id === 1 && stateSkill} />
+        <div className={props.className}>
+            {props.sectionContent.map((sect) => (
+                <div className="sections-wrapper">
+                    <div className="sections">
+                        <h3 key={sect.id}>{sect.text}</h3>
+                        <Button text={ButtonState ? <FaAngleRight /> : <FaAngleDown />} stateChange={() => setButtonState(!ButtonState)}/>
+                    </div>
+                    <div className={sect.text}>
+                        {sect.info.map((info) => (
+                             <Display text={info.text}/>
+                        ))}
+                    </div>
+                </div>
             ))}
         </div>
     )
