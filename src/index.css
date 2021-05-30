@@ -5,9 +5,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #ffd894;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Header{
+  background-color:bisque;
+  border: solid;
+  border-radius: 5px;
+  border-color: rgb(240,240,200);
+  margin-top: 2rem;
+
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  text-align: center;
+  color: #09002e;
+}
+
+h1{
+  padding: 5px;
+}
+
+.mainButton{
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  color:bisque;
+  border: none;
+  padding: 15px;
+  width: 50%;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+.contents .sectButton{
+  background-color: bisque;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border-color: blanchedalmond;
+}
+
+.contents{
+  margin-top:5%;
+  background-color: #09002e;
+  border-radius: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contents .section{
+  color:bisque;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 2rem;
+
+  padding: 0 10px 0 10px;
+}
+
+.skills{
+  margin-top: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.skills .section{
+  color:#09002e;
+  padding: 5px;
 }
