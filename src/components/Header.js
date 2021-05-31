@@ -2,7 +2,6 @@ import Button from "./Button"
 import { FaAngleRight} from "react-icons/fa"
 import { FaAngleDown } from "react-icons/fa"
 
-
 const Header = (props) => {
 
     return (

@@ -1,31 +1,31 @@
-import Button from "./Button"
-import Display from "./Display"
-import { FaAngleRight} from "react-icons/fa"
-import { FaAngleDown } from "react-icons/fa"
 import { useState } from 'react'
+import Section from './Section'
+
+import styled, { keyframes } from 'styled-components';
+import { fadeInDown } from 'react-animations';
+import { fadeIn } from 'react-animations';
 
 const Sections = ( props ) => {
 
+    const slideAnimation = keyframes`${fadeIn}`;
+    const SlideDiv = styled.div`
+    animation: .1s ${slideAnimation};
+    `;
+
     const [ButtonState, setButtonState] = useState(
-        true
+        {
+            1: true,
+            2: true,
+            3: true
+        }
     );
 
     return (
-        <div className={props.className}>
+        <SlideDiv><div className={props.className}>
             {props.sectionContent.map((sect) => (
-                <div className="sections-wrapper">
-                    <div className="sections">
-                        <h3 key={sect.id}>{sect.text}</h3>
-                        <Button text={ButtonState ? <FaAngleRight /> : <FaAngleDown />} stateChange={() => setButtonState(!ButtonState)}/>
-                    </div>
-                    <div className={sect.text}>
-                        {sect.info.map((info) => (
-                             <Display text={info.text}/>
-                        ))}
-                    </div>
-                </div>
+                <Section sect={sect} ButtonState={ButtonState} setButtonState={() => setButtonState(!ButtonState)}/>
             ))}
-        </div>
+        </div></SlideDiv>
     )
 }
 
