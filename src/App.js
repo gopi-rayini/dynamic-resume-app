@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <Header MainButtonState={MainButtonState} setMainButtonState={() => setMainButtonState(!MainButtonState)}/>
-      {!MainButtonState  && <Sections className="main-body" sectionContent={sectionContent}/>}
+      {!MainButtonState  && <Sections className="exp-body" sectionContent={sectionContent}/>}
     </div>
   );
 }
